@@ -1,19 +1,18 @@
 body {
   display: flex;
+  justify-content: center;
   padding: 20px;
   color: #DCD0F3; }
 
 #color-container {
   display: none; }
 
-#messages-container {
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center; }
-
 ul {
   list-style: none;
   padding: 0; }
+
+li {
+  padding-bottom: 20px; }
 
 input {
   outline: none; }

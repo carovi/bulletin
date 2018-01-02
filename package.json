@@ -15,6 +15,7 @@
     "gulp-cli": "^2.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.2",
+    "gulp-watch": "^4.3.11",
     "iro.js": "git+https://git@github.com/jaames/iro.js.git",
     "socket.io": "^2.0.4",
     "utf-8-validate": "^4.0.0",

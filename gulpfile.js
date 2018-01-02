@@ -3,7 +3,8 @@ var browserify = require('browserify'),
     sourcemaps = require('gulp-sourcemaps'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
-    sass = require('gulp-sass')
+    sass = require('gulp-sass'),
+    watch = require('gulp-watch')
 
 gulp.task('css', function() {
   return gulp.src('main.sass')

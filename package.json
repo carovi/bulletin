@@ -22,6 +22,6 @@
     "watchify": "^3.9.0"
   },
   "scripts": {
-    "start": "gulp js && node index.js"
+    "start": "./node_modules/gulp-cli/bin/gulp.js js && node index.js"
   }
 }

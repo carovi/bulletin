@@ -1,0 +1,27 @@
+{
+  "name": "colorful-sockets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "bufferutil": "^3.0.3",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-cli": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.2",
+    "iro.js": "git+https://git@github.com/jaames/iro.js.git",
+    "socket.io": "^2.0.4",
+    "utf-8-validate": "^4.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.9.0"
+  },
+  "scripts": {
+    "start": "gulp js && node index.js"
+  }
+}

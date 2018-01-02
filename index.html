@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="main.css"/>
+  </head>
+  <script src="/socket.io/socket.io.js"></script>
+  <body>
+    <div id='color-container'>
+      <div id='text'>Color test</div>
+      <div id='subtext'>This is a test of the color scheme changing</div>
+      <div id="color-picker-container"></div>
+    </div>
+    <ul id='messages-container'>
+      <form>
+        <input id="new-message" input type="text" onkeypress="formKeyPressed"/>
+      </form>
+      <li>hello i am message</li>
+    </div>
+  </body>
+  <script src="colors.js"></script>
+  <script>
+    var socket = io()
+    let colorUpdateInterval;
+
+    socket.on('color change', function(color) {
+      document.body.style.backgroundColor = color;
+    })
+
+  </script>
+</html>

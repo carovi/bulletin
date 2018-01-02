@@ -1,0 +1,39 @@
+body {
+  padding: 20px;
+  color: white;
+}
+
+#text {
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: .8;
+}
+
+#subtext {
+  margin-bottom: 20px;
+  font-size: 16px;
+  opacity: .65;
+}
+
+#color-container {
+  display: none;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 400px;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+li, input{
+  font-family: "Proxima Nova";
+  color: black;
+  font-weight: 400;
+  font-size: 25px;
+}

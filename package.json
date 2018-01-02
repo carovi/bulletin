@@ -13,6 +13,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-cli": "^2.0.0",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.2",
     "iro.js": "git+https://git@github.com/jaames/iro.js.git",
     "socket.io": "^2.0.4",
@@ -22,6 +23,6 @@
     "watchify": "^3.9.0"
   },
   "scripts": {
-    "start": "./node_modules/gulp-cli/bin/gulp.js js && node index.js"
+    "start": "./node_modules/gulp-cli/bin/gulp.js all && node index.js"
   }
 }

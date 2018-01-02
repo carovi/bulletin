@@ -5,18 +5,41 @@
     <link rel="stylesheet" href="main.css"/>
   </head>
   <script src="/socket.io/socket.io.js"></script>
+  <script>
+  function formKeyPressed(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault()
+      let ul = document.getElementById("messages")
+      let msg = document.getElementById('new-message').value
+      document.getElementById('new-message').value = ""
+      let li = document.createElement("li")
+      let liMsgText = document.createElement("div")
+      liMsgText.innerHTML = msg
+      liMsgText.className="msg-text"
+      let liMsgInfo = document.createElement("div")
+      liMsgInfo.innerHTML = "sent by my butt @ noon"
+      liMsgInfo.className="msg-info"
+      li.appendChild(liMsgText)
+      li.appendChild(liMsgInfo)
+      ul.prepend(li)
+    }
+  }
+  </script>
   <body>
     <div id='color-container'>
       <div id='text'>Color test</div>
       <div id='subtext'>This is a test of the color scheme changing</div>
       <div id="color-picker-container"></div>
     </div>
-    <ul id='messages-container'>
-      <form>
-        <input id="new-message" input type="text" onkeypress="formKeyPressed"/>
-      </form>
-      <li>hello i am message</li>
-    </div>
+    <form>
+      <input id="new-message" input type="text" autocomplete="off" onkeypress="formKeyPressed(event, this)"/>
+    </form>
+    <ul id='messages'>
+      <li>
+        <div class="msg-text">hello i am message</div>
+        <div class="msg-info">sent by a potato at 3pm</div>
+      </li>
+    </ul>
   </body>
   <script src="colors.js"></script>
   <script>

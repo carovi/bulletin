@@ -7,7 +7,7 @@ app.get('/', function(req, res) {
 })
 
 app.get('/main.css', function(req, res) {
-  res.sendFile(__dirname + '/main.css')
+  res.sendFile(__dirname + '/build/main.css')
 })
 
 app.get('/colors.js', function(req, res) {
@@ -20,7 +20,7 @@ io.on('connection', function(socket){
     socket.broadcast.emit('color change', color);
   });
 });
-    
+
 
 http.listen(3000, function() {
   console.log('listening on *:3000')

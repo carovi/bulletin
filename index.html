@@ -5,26 +5,6 @@
     <link rel="stylesheet" href="main.css"/>
   </head>
   <script src="/socket.io/socket.io.js"></script>
-  <script>
-  function formKeyPressed(event) {
-    if (event.keyCode === 13) {
-      event.preventDefault()
-      let ul = document.getElementById("messages")
-      let msg = document.getElementById('new-message').value
-      document.getElementById('new-message').value = ""
-      let li = document.createElement("li")
-      let liMsgText = document.createElement("div")
-      liMsgText.innerHTML = msg
-      liMsgText.className="msg-text"
-      let liMsgInfo = document.createElement("div")
-      liMsgInfo.innerHTML = "sent by my butt @ noon"
-      liMsgInfo.className="msg-info"
-      li.appendChild(liMsgText)
-      li.appendChild(liMsgInfo)
-      ul.prepend(li)
-    }
-  }
-  </script>
   <body>
     <div id='color-container'>
       <div id='text'>Color test</div>
@@ -51,6 +31,29 @@
     socket.on('color change', function(color) {
       document.body.style.backgroundColor = color;
     })
+
+    function formKeyPressed(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault()
+        let ul = document.getElementById("messages")
+        let msg = document.getElementById('new-message').value
+        document.getElementById('new-message').value = ""
+        let li = document.createElement("li")
+        let liMsgText = document.createElement("div")
+        liMsgText.innerHTML = msg
+        liMsgText.className="msg-text"
+        let liMsgInfo = document.createElement("div")
+        liMsgInfo.innerHTML = "sent by my butt @ noon"
+        liMsgInfo.className="msg-info"
+        li.appendChild(liMsgText)
+        li.appendChild(liMsgInfo)
+        ul.prepend(li)
+        socket.emit('note:add', {
+          content: msg,
+          author: 'avi'
+        })
+      }
+    }
 
   </script>
 </html>
